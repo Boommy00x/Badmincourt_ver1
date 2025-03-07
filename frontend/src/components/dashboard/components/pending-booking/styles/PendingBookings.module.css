@@ -1,0 +1,183 @@
+.pendingBookingsSection {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.bookingCard {
+  background-color: var(--card-background);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: slideIn 0.3s ease-out;
+  font-size: 0.875rem;
+}
+
+.bookingCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.bookingCardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.bookingCardDetails {
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.bookingCardButtons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.confirmButton,
+.cancelButton {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.confirmButton {
+  background-color: var(--success);
+  color: white;
+}
+
+.confirmButton:hover {
+  background-color: var(--success-hover);
+}
+
+.cancelButton {
+  background-color: var(--danger);
+  color: white;
+}
+
+.cancelButton:hover {
+  background-color: var(--danger-hover);
+}
+
+.bookingCard.exit {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.skeletonCard {
+  background: var(--card-background);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.skeletonTitle {
+  height: 24px;
+  background: var(--skeleton-color);
+  border-radius: 4px;
+  width: 70%;
+}
+
+.skeletonDetails {
+  height: 16px;
+  background: var(--skeleton-color);
+  border-radius: 4px;
+  width: 90%;
+}
+
+.skeletonButtons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.skeletonButton {
+  height: 36px;
+  background: var(--skeleton-color);
+  border-radius: 4px;
+  flex: 1;
+}
+
+.skeletonCard .skeletonTitle,
+.skeletonCard .skeletonDetails,
+.skeletonCard .skeletonButton {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bookingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingCard,
+  .skeletonCard {
+    padding: 1rem;
+  }
+
+  .bookingCardTitle {
+    font-size: 1rem;
+  }
+
+  .bookingCardDetails {
+    font-size: 0.75rem;
+  }
+
+  .confirmButton,
+  .cancelButton {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}

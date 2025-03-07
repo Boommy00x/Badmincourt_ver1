@@ -1,0 +1,200 @@
+/* Overlay for modal background */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  backdrop-filter: blur(2px);
+}
+
+/* Modal styling */
+.modal {
+  background-color: var(--background);
+  flex: 1;
+  margin-left: 70px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 58rem;
+  height: 85%;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* Close button styling */
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+/* Title styling */
+.title {
+  margin-bottom: 25px;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Status group styling */
+.statusGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+/* Schedule group with grid layout */
+.scheduleGroup {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+/* Day schedule styling */
+.daySchedule {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* Pyramid structure for day items */
+.scheduleGroup > :nth-child(1),
+.scheduleGroup > :nth-child(2) {
+  grid-column: span 1;
+}
+
+.scheduleGroup > :nth-child(3),
+.scheduleGroup > :nth-child(4),
+.scheduleGroup > :nth-child(5) {
+  grid-column: span 1;
+}
+
+.scheduleGroup > :nth-child(6),
+.scheduleGroup > :nth-child(7) {
+  grid-column: span 1;
+}
+
+/* Day header styling */
+.dayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Day name styling */
+.dayName {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Time range styling */
+.timeRange {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Closure list styling */
+.closureList {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Submit button styling */
+.submitButton {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.submitButton:hover {
+  background-color: var(--secondary-hover);
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.closeButton{
+  color: var(--text-detail);
+}
+/* Responsive adjustments */  
+@media (max-width: 480px) {
+  .modal {
+    padding: 1rem;
+    margin-left: 10px;
+    top: 3%;
+    right:1%;
+  }
+  .scheduleGroup {
+    grid-template-columns: 1fr;
+  }
+
+  .statusGroup {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width <= 768px) {
+  .modal {
+    padding: 1rem;
+    margin-left: 30px;
+    top: 4%;
+    left: 2%;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .scheduleGroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .daySchedule {
+    max-width: 100%;
+  }
+
+  .statusGroup {
+    /* flex-direction: column; */
+    align-items: flex-start;
+  }
+}

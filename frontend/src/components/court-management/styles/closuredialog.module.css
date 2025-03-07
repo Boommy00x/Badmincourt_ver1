@@ -1,0 +1,131 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.dialog {
+  background-color: var(--background);
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%; /* ใช้ความกว้าง 90% สำหรับหน้าจอเล็ก */
+  max-width: 350px; /* จำกัดความกว้างสูงสุด */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: var(--text-primary);
+}
+
+.title {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  color: var(--text-foreground);
+  background-color: var(--background);
+}
+
+.error {
+  color: rgb(242, 94, 94);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancelButton {
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+}
+
+.cancelButton:hover {
+  background-color: var(--background-hover);
+}
+
+.addButton {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+.addButton:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .dialog {
+      padding: 20px; /* ลด padding สำหรับหน้าจอเล็ก */
+  }
+
+  .title {
+      font-size: 1.25rem; /* ลดขนาดฟอนต์สำหรับหน้าจอเล็ก */
+  }
+
+  .input {
+      padding: 8px; /* ลด padding สำหรับ input */
+  }
+
+  .button {
+      padding: 8px 12px; /* ลด padding สำหรับปุ่ม */
+  }
+}
+
+@media (max-width: 480px) {
+  .dialog {
+    max-width: 250px;
+      /* padding: 50px; ลด padding สำหรับหน้าจอเล็กที่สุด */
+  }
+
+  .title {
+      font-size: 1.1rem; /* ลดขนาดฟอนต์สำหรับหน้าจอเล็กที่สุด */
+  }
+
+  .input {
+      padding: 6px; /* ลด padding สำหรับ input */
+  }
+
+  .button {
+      padding: 6px 10px; /* ลด padding สำหรับปุ่ม */
+  }
+}

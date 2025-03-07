@@ -1,0 +1,38 @@
+:root {
+    --primary: #e25858;
+    --primary-hover: #FF6B6B;
+    --primary-2-hover: #f57878;
+    --primary-foreground: #ffffff;
+    
+    --secondary: #28a745;
+    --secondary-hover: #059669;
+    
+    --primary-radio:#eea1a1; 
+    --danger: #dc3545;
+    --danger-hover: #dc2626;
+    
+    --background: #f3f4f6;
+    --card-background: #F8F9FA;
+    --active-page:#ff6f6f;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --text-third:#e5e7eb;
+    --text-detail:#9ca3af;
+    --border-color: #e5e7eb;
+    --border-sec:#d4d6da;
+    --border-in-table:#e4e5e9;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+  
+  .dark {
+    --background: #1f2937;
+    --card-background:#374151;
+    --card-background: #111827;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --border-color: #374151;
+  }
+  
+  

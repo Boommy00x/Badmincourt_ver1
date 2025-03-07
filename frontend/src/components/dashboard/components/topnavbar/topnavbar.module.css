@@ -1,0 +1,150 @@
+.topNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ff6b6b;
+  padding: 0 1rem;
+  z-index: 40;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for hiding/showing */
+  /* border-radius: 5px; */
+  /* drop-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.hidden {
+  transform: translateY(-100%); /* Move out of view when hidden */
+  opacity: 0; /* Fade out */
+}
+
+.visible {
+  transform: translateY(0); /* Reset position when visible */
+  opacity: 1; /* Fade in */
+}
+.menuButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menuButton:hover {
+  background: #ff8686;
+  transform: scale(1.05);
+}
+
+.menuButton:active {
+  transform: scale(0.95);
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
+  color: white;
+  stroke-width: 2;
+}
+.logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; 
+}
+
+.logo img {
+  max-height: 36px; 
+  object-fit: contain; 
+}
+
+/* Mobile styles specifically for iPhone SE and similar sizes */
+@media (max-width: 375px) {
+  .topNav {
+    height: 56px;
+    padding: 0 1rem;
+  }
+
+  .menuIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* General mobile styles */
+@media (max-width: 767px) {
+  .topNav {
+    display: flex;
+  }
+}
+
+/* Tablet and Desktop styles */
+@media (min-width: 768px) {
+  .topNav {
+    display: none;
+  }
+}
+
+/* Fix for Safari */
+@supports (-webkit-touch-callout: none) {
+  .topNav {
+    -webkit-backdrop-filter: blur(10px);
+    background-color: #ff6b6b;
+  }
+
+  .menuButton {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: var(--card-background);
+}
+
+.dark .menuButton:hover,
+.dark .iconButton:hover {
+  background: var(--background);
+  /* color: ; */
+}
+:global(.dark) .logo img {
+  filter: invert(1);
+}
+.rightIcons {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.iconButton:hover {
+  background: #ff8686;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+

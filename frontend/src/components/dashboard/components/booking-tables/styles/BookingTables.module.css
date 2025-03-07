@@ -1,0 +1,142 @@
+.bookingTablesContainer {
+  /* margin-bottom: 2rem; */
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+  padding: 0 0.5rem;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.bookingTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.tableContainer {
+  background-color: var(--card-background);
+  border-radius: 0.75rem;
+  border: 1.25px solid var(--border-sec);
+  margin: 0;
+  width: 100%;
+}
+
+.tableHead {
+  width: 25%;
+  padding: 1rem 1.25rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-in-table);
+  white-space: nowrap;
+  font-weight: 600;
+  text-align: left;
+}
+
+:global(.dark) .tableHead {
+  border-bottom: 0.25px solid var(--border-in-table);
+}
+
+.tableCell {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease;
+}
+
+.tableRow {
+  transition: all 0.2s ease;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tableRow:last-child .tableCell {
+  border-bottom: none;
+}
+
+.statusConfirmed {
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 0.875rem;
+}
+
+.statusCancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 0.875rem;
+}
+
+:global(.dark) .statusConfirmed {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+:global(.dark) .statusCancelled {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+:global(.dark) .tableContainer {
+  background-color: var(--card-background-dark);
+  border-color: var(--border-dark);
+}
+
+@media (max-width: 768px) {
+
+  .sectionTitle {
+    font-size: 1.5rem; /* Adjust title size */
+  }
+
+  .tableHead,
+  .tableCell {
+    padding: 0.75rem 0.5rem; /* Adjust padding for smaller screens */
+    font-size: 0.875rem; /* Adjust font size */
+  }
+
+  .bookingTable {
+    min-width: 100%; /* Ensure table takes full width */
+    display: block; /* Allow block display for better responsiveness */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+
+  .tableWrapper {
+    overflow-x: auto; /* Ensure overflow is enabled */
+  }
+
+  .tableContainer {
+    width: 100%; /* Ensure container takes full width */
+  }
+}

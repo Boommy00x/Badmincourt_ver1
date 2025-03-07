@@ -1,0 +1,322 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inputContainer input[type="password"] {
+  /* ลบไอคอนแสดงรหัสผ่านใน IE/Edge */
+  &::-ms-reveal,
+  &::-ms-clear {
+    display: none;
+  }
+
+  /* ลบปุ่ม auto-fill ใน Chrome */
+  &::-webkit-contacts-auto-fill-button,
+  &::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+}
+/* body{
+  overflow-y: hidden;
+}  */
+.container {
+  min-height: 100vh;
+  height: 100vh;
+  max-height: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+  color: #262626;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.errorText {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.decorativeCircle {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 9999px;
+  background-color: #FF6B6B;
+}
+
+.decorativeCircleBottom {
+  bottom: -8rem;
+  left: -8rem;
+}
+
+.decorativeCircleTop {
+  top: -8rem;
+  right: -8rem;
+}
+
+.formContainer {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 30rem;
+  z-index: 10;
+  margin: auto;
+  animation: fadeIn 1s ease-in-out;
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #ccc;
+  background-color: #F8F9FA;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputIcon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  appearance: none; 
+  width: 20px; 
+  height: 20px; 
+  border: 2px solid var(--primary-2-hover); 
+  border-radius: 4px; 
+  position: relative; 
+  cursor: pointer; 
+  outline: none; 
+  transition: background-color 0.3s;
+}
+
+.checkbox:checked {
+  background-color: var(--primary-2-hover); 
+}
+
+.checkbox:checked::after {
+  content: ''; 
+  position: absolute; 
+  top: 2px; 
+  left: 6px; 
+  width: 6px; 
+  height: 12px; 
+  border: solid white; 
+  border-width: 0 2px 2px 0; 
+  transform: rotate(45deg);
+}
+
+.checkboxLabel {
+  margin-left: 0.5rem;
+  color: #4b5563;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #f87171;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  /* transition: background-color 0.2s; */
+}
+
+.submitButton:hover {
+  background-color: #ef4444;
+}
+
+.submitButton {
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.submitButton:hover {
+  transform: translateY(-1px);
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 1.5rem;
+    max-width: 90%; /* Adjust max-width for smaller screens */
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .input,
+  .submitButton {
+    font-size: 0.95rem;
+  }
+
+  .decorativeCircle {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    padding: 1rem;
+    max-width: 95%; /* Adjust max-width for very small screens */
+  }
+
+  .container {
+    overflow: hidden; /* Prevent scrolling */
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .input,
+  .submitButton {
+    font-size: 0.9rem;
+    padding: 10px 35px 10px 12px;
+  }
+
+  .decorativeCircle {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .icon img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .checkboxLabel {
+    font-size: 0.8rem;
+  }
+}
+
+/* Safari-specific styles */
+@supports (-webkit-touch-callout: none) {
+  .safariBody {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  .safariContainer {
+    min-height: 100vh;
+    height: 100vh;
+    max-height: -webkit-fill-available;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    align-items: flex-start;
+    padding-top: 20vh; 
+  }
+
+  .decorativeCircle {
+    position: fixed;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 9999px;
+    background-color: #ff6b6b;
+    z-index: 1;
+  }
+
+  .decorativeCircle {
+    width: 15rem;
+    height: 15rem;
+  }
+  
+  .formContainer {
+    position: relative;
+    z-index: 10;
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 0vh; /* เพิ่ม negative margin เพื่อขยับ form ขึ้น */
+  }
+}
+
+
+/* @media (min-width: 1280px) {
+  .formContainer {
+    max-width: 40rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .input,
+  .submitButton {
+    font-size: 1.2rem;
+  }
+} */
+

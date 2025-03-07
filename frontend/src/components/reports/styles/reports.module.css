@@ -1,0 +1,195 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.main {
+  flex: 1;
+  margin-left: 70px;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem; /* Slightly larger for better emphasis */
+  font-weight: 700; /* Bolder for stronger visual impact */
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-detail);
+  font-size: 1rem; /* Slightly larger for readability */
+}
+
+.sectionTitle {
+  font-size: 1.125rem; /* Slightly larger for emphasis */
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 2rem 0;
+  margin-bottom: 1rem;
+}
+
+/* Daily Reports Table */
+.tableContainer {
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-sec);
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-in-table); /* Slightly thicker for better separation */
+}
+
+.table th {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.table td {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+/* Monthly Charts */
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+}
+
+.monthlyChart {
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease-in-out; /* Added transition for hover effect */
+}
+
+.monthlyChart:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.chartHeader {
+  margin-bottom: 1rem;
+}
+
+.chartHeader h3 {
+  color: var(--text-secondary);
+  font-size: 1rem; /* Slightly larger for emphasis */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.chartValue {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.chartDate {
+  color: var(--text-detail);
+  font-size: 0.75rem;
+}
+
+.chartContainer {
+  margin-bottom: 1rem;
+}
+
+/* Export Section */
+.export {
+  display: flex;
+  justify-content: flex-end; /* Aligns children to the right */
+  align-items: center; /* Vertically centers the content */
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.exportTitle {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.exportDescription {
+  color: var(--text-detail);
+  font-size: 0.875rem;
+  max-width: 600px;
+}
+
+.exportButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-2-hover);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.exportButton:hover {
+  background-color: var(--primary-hover); /* Slightly different hover color */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* :global(.recharts-line-curve) {
+  stroke: var(--primary-2-hover) !important;
+  stroke-width: 2;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 4.5rem .5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .sectionTitle {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .chartsGrid {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  .export {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start for smaller screens */
+  }
+
+  .exportButton {
+    width: 100%; /* Full width button for smaller screens */
+    justify-content: center;
+  }
+}

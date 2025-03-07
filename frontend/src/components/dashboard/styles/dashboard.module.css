@@ -1,0 +1,72 @@
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  /* left: 50%; */
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.dateHeader {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.metricCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tableContainer {
+  display: grid;
+}
+
+.error {
+  color: var(--danger);
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .mainContent {
+    margin-left: 70px; /* Width of expanded sidebar */
+  }
+
+  .sidebarNav.collapsed + .mainContent {
+    margin-left: 80px; /* Width of collapsed sidebar */
+  }
+  
+  .tableContainer {
+    overflow-x: auto; /* Enable horizontal scrolling for tables */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .mainContent {
+    margin-left: 0;
+    padding: 4.5rem .5rem 1rem; /* Extra padding top for mobile menu button */
+  }
+
+  .dateHeader {
+    font-size: 1.25rem;
+  }
+
+  .metricCardContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .tableContainer {
+    overflow-x: auto;
+  }
+}
+

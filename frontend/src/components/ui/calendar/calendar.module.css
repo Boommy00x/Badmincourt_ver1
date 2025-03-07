@@ -1,0 +1,113 @@
+.root {
+  width: 300px; /* Increased width for better visibility */
+  background: #ffffff; /* Soft white background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+  padding: 16px; /* Increased padding for spacing */
+}
+
+.months {
+  display: flex;
+  flex-direction: column;
+}
+
+.month {
+  color: #3d4d5c;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0; /* Padding for caption */
+}
+
+.captionLabel {
+  font-weight: 600; /* Bold caption label */
+  font-size: 1.2rem; /* Larger font size */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; /* Increased button size */
+  height: 36px; /* Increased button size */
+  border-radius: 8px; /* Rounded button corners */
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s; /* Smooth transitions */
+}
+
+.navButton:hover {
+  background-color: hsl(210, 15%, 90%); /* Light hover effect */
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.table {
+  width: 100%; /* Full width for the table */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+.headRow {
+  background-color: hsl(210, 15%, 95%); /* Light background for header */
+}
+
+.headCell {
+  padding: 10px; /* Padding for header cells */
+  text-align: center;
+  font-size: 0.9rem; /* Font size for header */
+  font-weight: 600; /* Bold font for header */
+  color: hsl(210, 20%, 30%); /* Darker text color */
+}
+
+.row {
+  display: table-row; /* Display as table row */
+}
+
+.cell {
+  aspect-ratio: 1; /* Square cells */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem; /* Font size for cells */
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners for cells */
+  margin: 4px; /* Margin between cells */
+  color: hsl(210, 20%, 30%); /* Darker text color */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.cell:hover:not(.day_outside) {
+  background-color: hsl(210, 15%, 95%); /* Light hover effect for cells */
+}
+
+.day {
+  padding: 8px; /* Padding for day cells */
+}
+
+.daySelected {
+  background-color: hsl(210, 80%, 50%); /* Bright color for selected day */
+  color: white; /* White text for selected day */
+  font-weight: 600; /* Bold font for selected day */
+}
+
+.dayToday {
+  background-color: hsl(210, 15%, 90%); /* Light background for today's date */
+  font-weight: 600; /* Bold font for today's date */
+}
+
+.dayOutside {
+  opacity: 0.5; /* Faded appearance for days outside the month */
+}
+
+.dayDisabled {
+  color: hsl(210, 15%, 70%); /* Gray color for disabled days */
+  cursor: not-allowed; /* Not-allowed cursor for disabled days */
+}

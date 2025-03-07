@@ -1,0 +1,352 @@
+.sidebarNav {
+  width: 260px;
+  background-color: #ff6b6b;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  z-index: 50;
+  transition: transform 0.3s ease, width 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-left: 0rem;
+  transition: all 0.3s ease;
+}
+
+
+.blurBackground {
+  position: relative;
+}
+
+.blurBackground::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 49;
+}
+
+.collapsed {
+  width: 80px;
+}
+
+.sidebarTop {
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px; /* Add fixed height */
+}
+
+.sidebarTitle {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.textName {
+  font-size: 1.15rem;
+  margin-left: 0.25rem;
+  font-weight: bold;
+  transition: opacity 0.3s ease, width 0.3s ease; /* Added width transition */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.collapsed .textName {
+  opacity: 0;
+  width: 0; /* This will animate the width */
+  overflow: hidden;
+}
+
+.collapseButton {
+  position: absolute;
+  right: -12px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-hover);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.collapseButton:hover {
+  transform: scale(1.1);
+}
+
+.collapseIcon {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+.navItems {
+  flex: 1;
+  padding: 0 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  /* overflow-y: auto; */
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  /* height: 44px; */
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.navItem:hover,
+.activeNavItem {
+  background-color: #ff8686;
+  color: #ffffff;
+  opacity: 1;
+  /* transform: translateX(px); */
+}
+
+.navIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.collapsed .navIcon {
+  margin-right: 0;
+}
+
+.navItem span {
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.collapsed .navItem span {
+  opacity: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.sidebarBottom {
+  padding: 1rem;
+  border-top: 1px solid #f3f4f6;
+  height: 180px; /* Change to fixed height */
+}
+
+.utilityGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.utilityGroup > * {
+  flex-shrink: 0;
+  height: 44px; /* Fixed height for all children */
+}
+
+/* Theme Toggle Styles */
+.themeToggle {
+  display: flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #ff8686;
+  overflow: hidden;
+  width: 100%;
+}
+
+.toggleIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.buttonIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.toggleInput {
+  display: none;
+}
+
+.toggleSlider {
+  width: 32px;
+  height: 18px;
+  background-color: #e5e7eb;
+  margin-left: auto;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggleSlider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 1.25px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggleInput:checked + .toggleSlider {
+  background-color: var(--card-background);
+}
+
+.toggleInput:checked + .toggleSlider:before {
+  transform: translateX(14px);
+}
+
+/* Logout Button Styles */
+.logoutButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: .75rem 1rem;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  transition: all 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.logoutButton span {
+  transition: opacity 0.2s ease;
+}
+
+.logoutButton:hover {
+  background-color: #ff8686;
+  color: #ffffff;
+}
+
+/* Collapsed State Styles */
+.collapsed .themeToggle {
+  width: auto;
+  padding: 0.75rem;
+  justify-content: center;
+}
+
+.collapsed .toggleIcon {
+  margin-right: 0;
+}
+
+.collapsed .toggleSlider,
+.collapsed .logoutButton span {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .sidebarNav {
+    transform: translateX(-100%);
+    width: 250px;
+    z-index: 1000;
+  }
+
+  .sidebarNav.open {
+    transform: translateX(0);
+  }
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  .mobileMenuButton,
+  .mobileMenu {
+    display: none;
+  }
+}
+
+
+/* Dark mode styles */
+:global(.dark).sidebar {
+  background-color: #1a1a1a;
+}
+
+:global(.dark).navButton {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:global(.dark).navButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+:global(.dark) .activeNavItem {
+  background-color: var(--background);
+  color: #ffffff;
+}
+
+:global(.dark) .navItem:hover {
+  background-color: var(--background);
+  color: #ffffff;
+}
+
+:global(.dark).sidebarNav {
+  background-color: var(--card-background);
+}
+
+:global(.dark).sidebarTitle {
+  color: white;
+}
+
+:global(.dark).navItem {
+  color: #9ca3af;
+}
+
+:global(.dark).themeToggle {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #9ca3af;
+}
+
+:global(.dark).themeToggle:hover {
+  color: white;
+}
+
+:global(.dark) .logoutButton:hover {
+  background-color: var(--background); /* Dark mode hover color */
+  color: white;
+}
+
+:global(.dark).sidebarBottom {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+:global(.dark) .themeToggle {
+    background-color: var(--background);
+}
+
+:global(.dark) .collapseButton {
+  background-color: var(--card-background);
+  border-color: #ffffff;
+}
+:global(.dark) .logo {
+  filter: invert(1);
+}

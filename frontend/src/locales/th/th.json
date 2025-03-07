@@ -1,0 +1,282 @@
+{
+  "app": {
+    "title": "แบดมินตันคอร์ท"
+  },
+  "nav": {
+    "dashboard": "แดชบอร์ด",
+    "reports": "รายงาน",
+    "courts": "จัดการสนาม",
+    "payments": "การชำระเงิน",
+    "notifications": "การแจ้งเตือน",
+    "settings": "ตั้งค่า",
+    "logout": "ออกจากระบบ",
+    "help": "ติดต่อเรา"
+  },
+  "logout": {
+    "confirmMessage": "คุณแน่ใจหรือไม่ที่จะออกจากระบบ?",
+    "loading": "กำลังออกจากระบบ...",
+    "errorMessage": "ไม่สามารถออกจากระบบได้ กรุณาลองใหม่อีกครั้ง"
+  },
+  "theme": {
+    "light": "โหมดสว่าง",
+    "dark": "โหมดมืด"
+  },
+  "language": {
+    "change": "เปลี่ยนภาษา"
+  },
+  "errors": {
+    "connectionFailed": "การเชื่อมต่อล้มเหลว"
+  },
+  "payment": {
+    "details": {
+      "title": "รายละเอียดการชำระเงิน",
+      "court": "สนาม",
+      "customer": "ลูกค้า",
+      "amount": "จำนวนเงิน",
+      "date": "วันที่",
+      "time": "เวลา",
+      "status": "สถานะ",
+      "slip": "สลิปการชำระเงิน",
+      "slipAlt": "รูปสลิปการชำระเงิน"
+    },
+    "status": {
+      "pending": "รอดำเนินการ",
+      "completed": "สำเร็จ",
+      "failed": "ล้มเหลว"
+    },
+    "history": {
+      "title": "ประวัติการชำระเงิน",
+      "courtImage": "รูปสนาม",
+      "court": "สนาม {{number}}",
+      "amount": "฿{{value}}"
+    }
+  },
+  "pagination": {
+    "previous": "หน้าก่อนหน้า",
+    "next": "หน้าถัดไป",
+    "page": "หน้า {{page}}"
+  },
+  "notifications": {
+    "title": "การแจ้งเตือน",
+    "markAllRead": "ทำเครื่องหมายทั้งหมดว่าอ่านแล้ว",
+    "tabs": {
+      "unread": "ยังไม่ได้อ่าน",
+      "read": "อ่านแล้ว"
+    },
+    "item": {
+      "details": "{{court}}, {{date}}, {{time}}"
+    },
+    "messages": {
+      "New booking request received": "ได้รับคำขอการจองใหม่"
+    },
+    "timeAgo": "{{time}}"
+  },
+  "settings": {
+    "adminManagement": "การจัดการผู้ดูแลระบบ",
+    "businessHours": {
+      "title": "เวลาทำการ",
+      "description": "ตั้งค่าเวลาทำการ เวลาปิด และวันหยุด"
+    },
+    "bookingPolicies": {
+      "title": "นโยบายการจอง",
+      "description": "กำหนดข้อกำหนดการจองและนโยบายการยกเลิก"
+    }
+  },
+  "common": {
+    "days": {
+      "monday": "วันจันทร์",
+      "tuesday": "วันอังคาร",
+      "wednesday": "วันพุธ",
+      "thursday": "วันพฤหัสบดี",
+      "friday": "วันศุกร์",
+      "saturday": "วันเสาร์",
+      "sunday": "วันอาทิตย์"
+    },
+    "save": "บันทึก"
+  },
+  "editCourtTitle": "แก้ไขสนาม: {{courtName}}",
+  "status": "สถานะ",
+  "active": "ใช้งาน",
+  "inactive": "ไม่ใช้งาน",
+  "price": "ราคาต่อชั่วโมง",
+  "pricing": "Pricing",
+  "perHour": "฿ ต่อชั่วโมง",
+  "saving": "กำลังบันทึก...",
+  "saveChanges": "บันทึกการเปลี่ยนแปลง",
+  "courtsmanagement": "จัดการสนาม",
+  "courtName": "ชื่อสนาม",
+  "images": "รูปภาพ",
+  "searchPlaceholder": "ค้นหาสนาม",
+  "error": "ข้อผิดพลาด",
+  "add" : "เพิ่ม",
+  "addClosure": "เพิ่มช่วงเวลาปิด",
+  "startTime": "เวลาเริ่มต้น",
+  "endTime": "เวลาสิ้นสุด",
+  "bothTimesRequired": "ต้องระบุเวลาเริ่มต้นและเวลาสิ้นสุดทั้งคู่",
+  "errorUpdatingCourt": "ไม่สามารถอัปเดตสนามได้",
+  "todayRevenue": "รายได้วันนี้",
+  "todayBookings": "การจองวันนี้",
+  "confirmedBookings": "การจองที่ยืนยันแล้ว",
+  "canceledBookings": "การจองที่ยกเลิกแล้ว",
+  "pendingBookingRequests": "คำขอจองที่รอดำเนินการ",
+  "loading": "กำลังโหลด...",
+  "loadingBookings": "กำลังโหลดการจอง...",
+  "noBookingsAvailable": " ไม่มีการจอง",
+  "name": "ชื่อ",
+  "court": "สนาม",
+  "time": "เวลา",
+  "date": "วันที่",
+  "reports": {
+    "totalRevenue": "รายได้รวม",
+    "totalCancellations": "การยกเลิกทั้งหมด",
+    "totalBookings": "การจองทั้งหมด",
+    "title": "รายงาน",
+    "subtitle": "ติดตามและวิเคราะห์การจอง ลูกค้า และรายได้ของคุณ",
+    "tabs": {
+      "overview": "ภาพรวม",
+      "daily": "รายวัน",
+      "weekly": "รายสัปดาห์",
+      "monthly": "รายเดือน",
+      "yearly": "รายปี"
+    },
+    "thisYear": "ปีนี้",
+    "dailyRevenue": "รายงานรายวัน",
+    "weeklyRevenue": "รายงานรายสัปดาห์",
+    "monthlyRevenue": "รายได้รายเดือน",
+    "yearlyRevenue": "รายได้รายปี",
+    "last5Years": "5 ปีที่ผ่านมา",
+    "exportData": "ส่งออกรายงาน",
+    "exportDescription": "ดาวน์โหลดข้อมูลรายงานสรุปรายได้ตามรูปแบบที่เลือกดู จำนวนการจองและจำนวนยกเลิกการจองทั้งหมด.",
+    "exportButton": "ดาวน์โหลด",
+    "exportFileName":"สรุปรายได้",
+    "tableHeaders": {
+      "date": "วันที่",
+      "week": "สัปดาห์",
+      "month": "เดือน",
+      "revenue": "รายได้",
+      "bookings": "การจอง",
+      "cancellations": "การยกเลิก",
+      "year": "ปี",
+      "totalRevenue": "รายได้รวม",
+      "totalBookings": "การจองทั้งหมด",
+      "totalCancellations": "การยกเลิกทั้งหมด"
+    },
+    "noChartAvailable": "ไม่มีกราฟให้บริการ",
+    "today": "วันนี้",
+    "todayBookings": "การจองวันนี้",
+    "฿": "฿",
+    "noBookingsAvailable": "ไม่มีการจอง",
+    "name": "ชื่อ",
+    "court": "สนาม",
+    "time": "เวลา",
+    "date": "วันที่",
+    "status": "สถานะ",
+    "booking": {
+      "status": {
+        "confirmed": "ยืนยัน",
+        "cancelled": "ยกเลิก",
+        "pending": "รอดำเนินการ"
+      }
+    },
+    "Date": {
+    "days": {
+      "sunday": "วันอาทิตย์",
+      "monday": "วันจันทร์",
+      "tuesday": "วันอังคาร",
+      "wednesday": "วันพุธ",
+      "thursday": "วันพฤหัสบดี",
+      "friday": "วันศุกร์",
+      "saturday": "วันเสาร์"
+    },
+    "months": {
+      "january": "มกราคม",
+      "february": "กุมภาพันธ์",
+      "march": "มีนาคม",
+      "april": "เมษายน",
+      "may": "พฤษภาคม",
+      "june": "มิถุนายน",
+      "july": "กรกฎาคม",
+      "august": "สิงหาคม",
+      "september": "กันยายน",
+      "october": "ตุลาคม",
+      "november": "พฤศจิกายน",
+      "december": "ธันวาคม"
+    },
+    "separator": "ที่"
+  },
+  "reports": {
+    "Date": {
+      "days": {
+        "sunday": "วันอาทิตย์",
+        "monday": "วันจันทร์",
+        "tuesday": "วันอังคาร",
+        "wednesday": "วันพุธ",
+        "thursday": "วันพฤหัสบดี",
+        "friday": "วันศุกร์",
+        "saturday": "วันเสาร์"
+      },
+      "months": {
+        "january": "มกราคม",
+        "february": "กุมภาพันธ์",
+        "march": "มีนาคม",
+        "april": "เมษายน",
+        "may": "พฤษภาคม",
+        "june": "มิถุนายน",
+        "july": "กรกฎาคม",
+        "august": "สิงหาคม",
+        "september": "กันยายน",
+        "october": "ตุลาคม",
+        "november": "พฤศจิกายน",
+        "december": "ธันวาคม"
+      },
+      "separator": "ที่"
+    }
+   }
+  },
+  "Booking": {
+    "details": {
+      "status": {
+        "confirmed": "ยืนยัน",
+        "cancelled": "ยกเลิก",
+        "pending": "รอดำเนินการ"
+      }
+    }
+  },
+  "confirm": "ยืนยันการจอง",
+  "cancel": "ยกเลิกการจอง",
+  "details": "รายละเอียดเพิ่มเติม",
+  "errorConfirming" : "ผิดพลาดในการยืนยันการจอง",
+  "errorCancelling" : "ผิดพลาดในการยกเลิกการจอง",
+  "revenue":"รายได้",
+  "bookings":"การจอง",
+  "cancellations":"การยกเลิก",
+  "noPendingBookings": "ไม่มีการจองที่รอดำเนินการ",
+    "Court 1": "สนาม 1",
+    "Court 2": "สนาม 2",
+    "Court 3": "สนาม 3",
+    "Court 4": "สนาม 4",
+    "Court 5": "สนาม 5",
+    "Court 6": "สนาม 6",
+    "Court 7": "สนาม 7",
+    "Court 8": "สนาม 8",
+    "Court 9": "สนาม 9",
+    "Court 10": "สนาม 10",
+    "Court 11": "สนาม 11",
+    "Court 12": "สนาม 12",
+    "monday": "วันจันทร์",
+    "tuesday": "วันอังคาร",
+    "wednesday": "วันพุธ",
+    "thursday": "วันพฤหัสบดี",
+    "friday": "วันศุกร์",
+    "saturday": "วันเสาร์",
+    "sunday": "วันอาทิตย์",
+    "Select Date": "เลือกวันที่",
+    "today":"วันนี้",
+    "tomorrow":"พรุ่งนี้",
+    "filter": "ตัวกรอง",
+    "confirmed":"ยืนยัน",
+    "cancelled": "ยกเลิก",
+    "failed": "ล้มเหลว",
+    "total": "รวม"
+}
+

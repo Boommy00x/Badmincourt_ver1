@@ -1,0 +1,174 @@
+/* courtmanage.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column; /* Change to column for smaller screens */
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: 80px;
+  padding: 1.25rem;
+}
+
+.main.blurred {
+  filter: blur(4px);
+}
+
+.title {
+  font-size: 2rem; /* Adjusted font size for smaller screens */
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+.searchContainer {
+  position: relative;
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.searchContainer:focus-within .searchIcon {
+  color: var(--primary);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: var(--text-secondary);
+  transition: opacity 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border: 1.25px solid #f89e9e;
+  transform: translateY(-1px);
+}
+
+.searchInput:focus::placeholder {
+  opacity: 0.7;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background-color: var(--card-background);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  border: 1.25px solid var(--border-sec);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-in-table);
+}
+
+.table th {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.table td {
+  color: var(--text-primary);
+}
+
+.courtImage {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.5rem;
+  object-fit: cover;
+}
+:global(.dark) .courtImage {
+  filter: invert(1);
+}
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.active {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.inactive {
+  background-color: rgba(107, 114, 128, 0.1);
+  color: #6b7280;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .main {
+    margin-left: 70px; /* Width of expanded sidebar */
+    padding: 2rem; /* Maintain padding for desktop */
+  }
+
+  .tableContainer {
+    overflow-x: auto; /* Enable horizontal scrolling for tables */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .main {
+    margin-left: 0; /* Remove left margin for mobile */
+    padding: 4.5rem .5rem 1rem; /* Extra padding top for mobile menu button */
+  }
+
+  .title {
+    font-size: 1.5rem; /* Adjust title size for mobile */
+    margin-left: 0; /* Center title */
+    /* text-align: center; Center align title */
+  }
+
+  .courtImage {
+    width: 2rem; /* Adjust court image size for mobile */
+    height: 2rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.75rem; /* Adjust padding for table cells */
+    font-size: 0.875rem; /* Adjust font size for table cells */
+  }
+
+  .searchInput {
+    padding: 0.7rem 0.5rem 0.7rem 3rem; /* Adjust padding for search input */
+  }
+}

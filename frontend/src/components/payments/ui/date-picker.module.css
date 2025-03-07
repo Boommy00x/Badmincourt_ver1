@@ -1,0 +1,35 @@
+.datePickerButton {
+  background-color: #e5e7eb;
+  border: none;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  min-width: 200px;
+}
+
+/* .datePickerButton:hover {
+  background-color: #e5e7eb;
+} */
+
+.placeholder {
+  color: #6b7280;
+}
+
+.popoverContent {
+  margin-top: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 640px) {
+  .datePickerButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

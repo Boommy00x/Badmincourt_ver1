@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+    .Toastify__Toast {
+      font-size: 14px; /* Smaller font size on mobile */
+    }
+  }

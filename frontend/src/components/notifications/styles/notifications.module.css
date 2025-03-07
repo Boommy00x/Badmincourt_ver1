@@ -1,0 +1,209 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: 70px;
+  padding: 2rem;
+  background-color: var(--background);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-sec);
+  position: relative;
+}
+
+:global(.dark) .tabs {
+  border-color: var(--border-dark);
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+.tab:hover {
+  color: var(--primary-2-hover);
+}
+
+.activeTab {
+  color: var(--text-primary);
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+/* Notification List */
+.notificationList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.markAllButton {
+  padding: 0.25rem 1rem;
+  color: var(--text-detail);
+  font-weight: 500;
+}
+
+.markAllButton:hover {
+  transform: translateY(-2px);
+  color: var(--primary-2-hover);
+}
+
+:global(.dark) .markAllButton:hover {
+  color: var(--primary-2-hover);
+}
+
+:global(.dark) .markAllButton {
+  color: var(--text-detail);
+}
+
+.markAllButton:hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notificationItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background-color: var(--card-background);
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:global(.dark) .notificationItem {
+  background-color: var(--card-background-dark);
+  border-color: var(--border-dark);
+}
+
+.notificationItem:hover {
+  background-color: var(--primary-2-hover);
+  transform: translateY(-2px);
+}
+
+:global(.dark) .notificationItem:hover {
+  background-color: #374151;
+}
+
+.notificationItem:hover .notificationTitle,
+.notificationItem:hover .timeAgo {
+  color: var(--primary-foreground);
+}
+
+.notificationItem:hover .notificationMessage {
+  color: var(--text-thrid);
+}
+
+.notificationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-2-hover);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+:global(.dark) .notificationIcon {
+  background: #374151;
+  color: var(--primary-foreground);
+}
+
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--primary-foreground);
+}
+
+.notificationContent {
+  flex: 1;
+  min-width: 0;
+  padding: 0.25rem 0;
+}
+
+.notificationTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.notificationMessage {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.timeAgo {
+  font-size: 0.75rem;
+  color: var(--text-detail);
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+:global(.dark) .timeAgo {
+  color: var(--text-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 4rem .5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .tab {
+    padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+    font-size: 0.875rem; /* Adjust font size for smaller screens */
+  }
+
+  .notificationItem {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch;
+    margin: auto;
+  }
+
+  .notificationIcon {
+    margin-bottom: 0.5rem; /* Add margin for spacing */
+  }
+
+  .notificationTitle,
+  .notificationMessage,
+  .timeAgo {
+    font-size: 0.875rem; /* Adjust font size for smaller screens */
+  }
+}

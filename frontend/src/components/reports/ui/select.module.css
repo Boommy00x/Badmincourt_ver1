@@ -1,0 +1,97 @@
+.selectTrigger {
+    display: flex;
+    height: 2.5rem; 
+    width: 100%; 
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.375rem; 
+    border: 1px solid var(--color-input); 
+    background-color: transparent; 
+    padding: 0.5rem 0.75rem; 
+    font-size: 0.875rem; 
+    outline: none; 
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 0 0 0 2px transparent;
+    &:focus {
+      box-shadow: 0 0 0 2px var(--color-ring), 0 0 0 4px var(--color-background); 
+    }
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; 
+    }
+  }
+  
+  .selectIcon {
+    height: 1rem;
+    width: 1rem; 
+    opacity: 0.5; 
+  }
+  
+  .selectContent {
+    position: relative; 
+    z-index: 50; 
+    min-width: 8rem; 
+    overflow: hidden; 
+    border-radius: 0.375rem; 
+    border: 1px solid; 
+    background-color: var(--card-background); 
+    color: var(--primary-2-hover); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in; 
+  }
+  
+  .selectContentPopper {
+    transform: translateY(0.25rem); 
+  }
+  
+  .selectViewport {
+    padding: 0.25rem; 
+  }
+  
+  .selectLabel {
+    padding: 0.375rem 0.5rem 0.375rem 2rem; 
+    font-size: 0.875rem; 
+    font-weight: 600; 
+  }
+  
+  .selectItem {
+    position: relative; 
+    display: flex;
+    width: 100%; 
+    cursor: default;
+    user-select: none; 
+    align-items: center;
+    border-radius: 0.125rem;
+    padding: 0.375rem 0.5rem 0.375rem 2rem; 
+    font-size: 0.875rem;
+    outline: none; 
+    &:focus {
+      background-color: var(--color-accent); 
+      color: var(--color-accent-foreground); 
+    }
+    &[data-disabled] {
+      pointer-events: none; 
+      opacity: 0.5; 
+    }
+  }
+  
+  .selectItemIndicator {
+    position: absolute;
+    left: 0.5rem;
+    display: flex;
+    height: 0.875rem; 
+    width: 0.875rem; 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .selectItemIndicatorIcon {
+    height: 1rem; 
+    width: 1rem; 
+  }
+  
+  .selectSeparator {
+    margin: 0.25rem -0.25rem; 
+    height: 1px; 
+    background-color: var(--color-muted); 
+  }

@@ -1,0 +1,155 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; /* Change to column for mobile */
+}
+
+.main {
+  flex: 1;
+  margin-left: 70px;
+  padding: 2rem;
+  background-color: var(--background);
+  transition: margin-left 0.3s ease; /* Add transition for smooth sidebar toggle */
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-sec);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.card:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.card:hover .cardTitle {
+  color: var(--primary-foreground);
+}
+
+.card:hover .cardDescription {
+  color: var(--text-thrid);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primary-hover);
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--primary-foreground);
+}
+
+.content {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 0.875rem;
+  color: var(--text-detail);
+  line-height: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    padding: 4.5rem .5rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Change to single column layout */
+  }
+
+  .card {
+    padding: 1rem; /* Adjust padding of cards */
+  }
+
+  .title {
+    font-size: 1.5rem; /* Adjust title size */
+  }
+}
+
+/* Dark mode styles */
+:global(.dark).card {
+  background-color: #1f2937;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+:global(.dark).card:hover {
+  border-color: var(--border-in-table);
+  background-color: #374151;
+}
+
+:global(.dark).cardTitle {
+  color: #f9fafb;
+}
+
+:global(.dark).cardDescription {
+  color: #9ca3af;
+}
+
+:global(.dark).iconWrapper {
+  background-color: #374151;
+}
+
+:global(.dark).card:hover .cardTitle {
+  color: #ffffff;
+}
+
+:global(.dark).card:hover .cardDescription {
+  color: #d1d5db;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

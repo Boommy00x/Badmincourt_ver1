@@ -1,0 +1,56 @@
+.dropdownTrigger {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* .dropdownTrigger:hover {
+  background-color: #e5e7eb;
+} */
+
+.dropdownContent {
+  min-width: 160px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-top: 4px;
+  animation: slideDown 0.2s ease-out; /* Added animation */
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #374151;
+  border-radius: 4px ;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdownItem:hover {
+  background-color: var(--primary-2-hover);
+  color: var(--primary-foreground);
+}
+
+/* Animation for dropdown */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

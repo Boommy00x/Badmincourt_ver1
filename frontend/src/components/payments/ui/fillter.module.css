@@ -1,0 +1,96 @@
+.filterWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.filterTitle {
+  font-size: 16px;
+
+  /* margin-left: .25rem; */
+  /* font-weight: 600; */
+  color:var(--text-primary);
+}
+
+.filterContainer {
+  display:flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.filterButton {
+  min-width: 90px;
+  background-color: #e5e7eb;
+  /* border: 2px solid #ffffff; */
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.filterButton.active {
+  background-color: var(--card-background);
+  color: var(--primary-2-hover);
+  border: 2px solid var(--primary-2-hover);
+}
+
+.active {
+  background-color: hsl(210, 80%, 50%); /* Active button background color */
+  color: white; /* Active button text color */
+}
+.statusButton{
+  background-color: #e5e7eb;
+  /* border: 2px solid #ffffff; */
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  
+}
+.datePickerButton {
+  background-color: #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  min-width: 140px;
+}
+
+.datePickerContainer {
+  position: absolute; /* Use absolute positioning */
+  top: 87%; /* Position it below the button */
+  left: 6rem; /* Align it to the left */
+  margin-top: 8px; /* Add some space between the button and the date picker */
+  /* border: 1px solid #ccc;  */
+  border-radius: 4px; /* Optional rounded corners */
+  padding: 10px; /* Optional padding */
+  background-color: white; /* Background color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+.datePicker{
+  color: hsl(210, 20%, 30%);
+}
+@media (max-width: 768px) {
+  .filterContainer {
+    flex-wrap: wrap;
+    
+  }
+  .datePickerContainer{
+    left:0;
+  }
+  .filterButton {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+

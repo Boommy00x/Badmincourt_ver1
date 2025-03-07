@@ -1,0 +1,276 @@
+{
+  "app": {
+    "title": "BadminCourt"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "courts": "Court Management",
+    "payments": "Payments",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "logout": "Logout",
+    "help": "ContractUs"
+  },
+  "logout": {
+    "confirmMessage": "Are you sure you want to logout?",
+    "loading": "Logging Out...",
+    "errorMessage": "Cannot logout, please try again later"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+  "language": {
+    "change": "Change Language"
+  },
+  "errors": {
+    "connectionFailed": "Connection failed"
+  },
+  "payment": {
+    "details": {
+      "title": "Payment Details",
+      "court": "Court",
+      "customer": "Customer",
+      "amount": "Amount",
+      "date": "Date",
+      "time": "Time",
+      "status": "Status",
+      "slip": "Payment Slip",
+      "slipAlt": "Payment Slip Image"
+    },
+    "status": {
+      "pending": "PENDING",
+      "completed": "COMPLETED",
+      "failed": "FAILED"
+    },
+    "history": {
+      "title": "Payment History",
+      "courtImage": "Court Image",
+      "court": "Court {{number}}",
+      "amount": "฿{value}"
+    }
+  },
+  "pagination": {
+    "previous": "Previous page",
+    "next": "Next page",
+    "page": "Page {{page}}"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark all as read",
+    "tabs": {
+      "unread": "Unread",
+      "read": "Read"
+    },
+    "item": {
+      "details": "{{court}}, {{date}}, {{time}}"
+    },
+    "messages": {
+      "New booking request received": "New booking request received"
+    },
+    "timeAgo": "{{time}}"
+  },
+  "common": {
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "save": "Save"
+  },
+  "settings": {
+    "adminManagement": "Admin Management",
+    "businessHours": {
+      "title": "Business Hours",
+      "description": "Set your operating hours, closing times and holidays"
+    },
+    "bookingPolicies": {
+      "title": "Booking Policies",
+      "description": "Configure advance booking and cancellation policies"
+    }
+  },
+  "courtsmanagement": "Court Management",
+  "editCourtTitle": "Edit Court: {{courtName}}",
+  "status": "Status",
+  "active": "Active",
+  "inactive": "Inactive",
+  "price": "Pricing perHour",
+  "pricing": "Pricing",
+  "perHour": "฿ per hour",
+  "saving": "Saving...",
+  "saveChanges": "Save Changes",
+  "court": "Court",
+  "image": "Image",
+  "searchPlaceholder": "Search courts...",
+  "error": "Error",
+  "addClosure": "add closure",
+  "startTime": "Start Time",
+  "endTime": "End Time",
+  "bothTimesRequired": "Both start and end times are required.",
+  "errorUpdatingCourt": "Failed to update court",
+  "todayRevenue": "Today's Revenue",
+  "todayBookings": "Today's Bookings",
+  "confirmedBookings": "Confirmed Bookings",
+  "canceledBookings": "Canceled Bookings",
+  "pendingBookingRequests": "Pending Booking Requests",
+  "loading": "Loading...",
+  "loadingBookings": "Loading bookings...",
+  "noBookingsAvailable": "No bookings available",
+  "name": "Name",
+  "time": "Time",
+  "date": "Date",
+  "reports": {
+    "revenue": "Revenue",
+    "totalBookings": "Total Bookings",
+    "totalCancellations": "Total Cancellations",
+    "title": "Reports",
+    "subtitle": "Track and analyze your bookings, customers, and revenue",
+    "tabs": {
+      "overview": "Overview",
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "confirmed": "Confirmed",
+    "cancelled": "Cancelled",
+    "totalRevenue": "Total Revenue",
+    "thisYear": "This Year",
+    "dailyRevenue": "Daily Reports",
+    "weeklyRevenue": "Weekly Reports",
+    "monthlyRevenue": "Monthly Revenue",
+    "yearlyRevenue": "Yearly Revenue",
+    "last5Years": "Last 5 Years",
+    "exportData": "Export Report",
+    "exportDescription": "Download revenue summary report in selected format, total bookings and cancellations.",
+    "exportButton": "Download",
+    "tableHeaders": {
+      "date": "Date",
+      "week": "Week",
+      "month": "Month",
+      "revenue": "Revenue",
+      "bookings": "Bookings",
+      "cancellations": "Cancellations",
+      "year": "Year",
+      "totalRevenue": "Total Revenue",
+      "totalBookings": "Total bookings",
+      "totalCancellations": "Total cancellations"
+    },
+    "noChartAvailable": "No chart available",
+    "today": "Today",
+    "todayBookings": "Today's Bookings",
+    "฿": "฿",
+    "noBookingsAvailable": "No bookings available",
+    "name": "Name",
+    "court": "Court",
+    "time": "Time",
+    "date": "Date",
+    "status": "Status",
+    "Date": {
+      "days": {
+        "sunday": "Sunday",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday"
+      },
+      "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      },
+      "separator": ","
+    },
+    "reports": {
+      "Date": {
+        "days": {
+          "sunday": "Sunday",
+          "monday": "Monday",
+          "tuesday": "Tuesday",
+          "wednesday": "Wednesday",
+          "thursday": "Thursday",
+          "friday": "Friday",
+          "saturday": "Saturday"
+        },
+        "months": {
+          "january": "January",
+          "february": "February",
+          "march": "March",
+          "april": "April",
+          "may": "May",
+          "june": "June",
+          "july": "July",
+          "august": "August",
+          "september": "September",
+          "october": "October",
+          "november": "November",
+          "december": "December"
+        },
+        "separator": ","
+      }
+    }
+    },
+    "Booking": {
+      "details": {
+        "status": {
+          "confirmed": "Confirmed",
+          "cancelled": "Cancelled",
+          "pending": "Pending"
+        }
+      }
+    },
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "details": "More Details",
+    "errorConfirming" : "Error confirming booking",
+    "errorCancelling" : "Error cancelling booking",
+    "add": "Add",
+    "noPendingBookings": "No pending bookings",
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "Court 1": "Court 1",
+    "Court 2": "Court 2",
+    "Court 3": "Court 3",
+    "Court 4": "Court 4",
+    "Court 5": "Court 5",
+    "Court 6": "Court 6",
+    "Court 7": "Court 7",
+    "Court 8": "Court 8",
+    "Court 9": "Court 9",
+    "Court 10": "Court 10",
+    "Court 11": "Court 11",
+    "Court 12": "Court 12",
+    "Select Date": "Select Date",
+    "today":"Today",
+    "tomorrow":"Tomorrow",
+    "filter": "Filter",
+    "confirmed":"Confirmed",
+    "cancelled": "Cancelled",
+    "completed": "Completed",
+    "pending": "Pending",
+    "failed": "Failed"
+}
+
